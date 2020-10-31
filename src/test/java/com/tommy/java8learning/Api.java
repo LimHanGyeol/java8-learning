@@ -66,8 +66,8 @@ public class Api {
     @DisplayName("stream Api를 이용하여 대문자로 변환한 리스트를 반환")
     void streamUpperCase() {
         List<String> results = names.stream()
-                                   .map(String::toUpperCase)
-                                   .collect(Collectors.toList());
+                                    .map(String::toUpperCase)
+                                    .collect(Collectors.toList());
         assertThat(results).containsExactly("KEESUN", "HANGYEOL", "WHITESHIP","TOBY", "TOMMY", "FOO");
     }
 
