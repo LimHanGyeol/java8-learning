@@ -76,7 +76,7 @@ class OnlineClassTest {
     }
 
     @Test
-    @DisplayName("Java 수업 중에 Test가 들어있는 수업이 있는지 확인")
+    @DisplayName("Java 수업 중에 Test 가 들어있는 수업이 있는지 확인")
     void isContainsTestToJavaStudy() {
         boolean result = javaClasses.stream()
                     .anyMatch(onlineClass -> onlineClass.isContainsToTitle("Test"));

@@ -41,5 +41,5 @@ public class OnlineClass {
     public Optional<Progress> getProgress() {
         return Optional.ofNullable(progress);
     }
-    
+
 }
