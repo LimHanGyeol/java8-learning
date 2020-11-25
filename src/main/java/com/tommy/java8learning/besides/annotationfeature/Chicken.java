@@ -1,4 +1,4 @@
-package com.tommy.java8learning.besides;
+package com.tommy.java8learning.besides.annotationfeature;
 
 import java.lang.annotation.*;
 

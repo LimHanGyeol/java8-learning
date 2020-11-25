@@ -1,7 +1,6 @@
-package com.tommy.java8learning.besides;
+package com.tommy.java8learning.besides.annotationfeature;
 
 import java.util.Arrays;
-import java.util.List;
 
 @Chicken("양념")
 @Chicken("마늘간장")
