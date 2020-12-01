@@ -8,10 +8,10 @@ public class ScheduledExecutorTest {
 
     public static void main(String[] args) {
         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
-//        executorService.schedule(getRunnable("Hello"), 3, TimeUnit.SECONDS);
+        // executorService.schedule(getRunnable("Hello"), 3, TimeUnit.SECONDS);
         executorService.scheduleAtFixedRate(getRunnable("Hello"), 1,2, TimeUnit.SECONDS);
 
-//        executorService.shutdown();
+        // executorService.shutdown();
     }
 
     private static Runnable getRunnable(String message) {

@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 public class ExecutorTest {
 
     public static void main(String[] args) {
-//        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        // ExecutorService executorService = Executors.newSingleThreadExecutor();
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         executorService.submit(getRunnable("Hello"));
         executorService.submit(getRunnable("Hangyeol"));
@@ -15,7 +15,7 @@ public class ExecutorTest {
         executorService.submit(getRunnable("Thread"));
 
         executorService.shutdown();
-//        executorService.shutdownNow();
+        // executorService.shutdownNow();
     }
 
     private static Runnable getRunnable(String message) {
