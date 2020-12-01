@@ -11,20 +11,11 @@ public class CallableTest3 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(4);
 
-        Callable<String> hello = () -> {
-            Thread.sleep(2000L);
-            return "Hello";
-        };
+        Callable<String> hello = CallableTest2.getCallable(2000L, "Hello");
 
-        Callable<String> java = () -> {
-            Thread.sleep(3000L);
-            return "Java";
-        };
+        Callable<String> java = CallableTest2.getCallable(3000L, "Java");
 
-        Callable<String> hangyeol = () -> {
-            Thread.sleep(1000L);
-            return "Hangyeol";
-        };
+        Callable<String> hangyeol = CallableTest2.getCallable(1000L, "Hangyeol");
 
         // 서버 3대가 있고, 같은 파일 A가 복사되어 모두 존재한다.
         // 3대의 서버로 나눈 이유는 특정 서버가 다운되도 서비스를 유지하기 위함이다.

@@ -18,10 +18,8 @@ public class ExecutorTest {
         // executorService.shutdownNow();
     }
 
-    private static Runnable getRunnable(String message) {
-        return () -> {
-            System.out.println(message + Thread.currentThread().getName());
-        };
+    public static Runnable getRunnable(String message) {
+        return () -> System.out.println(message + Thread.currentThread().getName());
     }
 
 }

@@ -9,20 +9,11 @@ public class CallableTest2 {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
-        Callable<String> hello = () -> {
-            Thread.sleep(2000L);
-            return "Hello";
-        };
+        Callable<String> hello = getCallable(2000L, "Hello");
 
-        Callable<String> java = () -> {
-            Thread.sleep(3000L);
-            return "Java";
-        };
+        Callable<String> java = getCallable(3000L, "Java");
 
-        Callable<String> hangyeol = () -> {
-            Thread.sleep(1000L);
-            return "Hangyeol";
-        };
+        Callable<String> hangyeol = getCallable(1000L, "Hangyeol");
 
         // Callable 을 묶어서 사용할 수 있다.
         // invokeAll 은 묶인 Callable 을 전부 기다리기 때문에 한번에 출력이 된다.
@@ -33,6 +24,13 @@ public class CallableTest2 {
         printFuture(futures);
 
         executorService.shutdown();
+    }
+
+    public static Callable<String> getCallable(long millis, String message) {
+        return () -> {
+            Thread.sleep(millis);
+            return message;
+        };
     }
 
     private static void printFuture(List<Future<String>> futures) throws InterruptedException, ExecutionException {
