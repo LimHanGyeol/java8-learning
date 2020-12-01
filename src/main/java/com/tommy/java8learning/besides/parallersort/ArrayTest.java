@@ -29,7 +29,7 @@ public class ArrayTest {
         initArrays(size, numbers);
 
         start = System.nanoTime();
-        Arrays.parallelSort(numbers); //
+        Arrays.parallelSort(numbers);
         System.out.println("parallel sorting took " + (System.nanoTime() - start));
     }
 
