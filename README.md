@@ -3,7 +3,7 @@
 
 ## 학습 내용
 * FunctionalInterface와 Lambda
-* java.util.funtion
+* java.util.function
 * Method Reference
 * Interface의 default method와 static method
 * Stream
